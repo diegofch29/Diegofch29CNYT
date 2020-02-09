@@ -31,7 +31,7 @@ Los vectores esta implentados mediante una lista de Numeros Complejos, pra crear
 	-Distancia entre vectores
 	-Producto tensor(entre vectores y matriz-vector)
 ## Matrizes
-Las matrices estan implementadas por listas de vectores que representan las columnas y soporta las siguientes funciones
+Las matrices estan implementadas por listas de vectores que representan las columnas y soporta las siguientes funciones.
 	-Adicion
 	-Inversa aditiva
 	-Multiplicacion escalar por una matriz compleja
@@ -43,6 +43,7 @@ Las matrices estan implementadas por listas de vectores que representan las colu
 	-Revisar si una matriz es unitaria
 	-Producto Tensor entre matrices
 ## Por hacer
+Lo siguiente son algunas cosas que faltan por hacer
 	-Pruebas para vectores y matrices
 	-implementar revisar si una matriz es unitaria
 	-arreglar Cambios de coordenadas de numeros complejos
