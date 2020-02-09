@@ -44,9 +44,9 @@ Las matrices estan implementadas por listas de vectores que representan las colu
 - Producto Tensor entre matrices
 ## Por hacer
 Lo siguiente son algunas cosas que faltan por hacer.
--Pruebas para vectores y matrices
--implementar revisar si una matriz es unitaria
--arreglar Cambios de coordenadas de numeros complejos
+- Pruebas para vectores y matrices
+- implementar revisar si una matriz es unitaria
+- arreglar Cambios de coordenadas de numeros complejos
 
 
    
