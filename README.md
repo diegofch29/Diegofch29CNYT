@@ -45,7 +45,7 @@ Las matrices estan implementadas por listas de vectores que representan las colu
 ## Por hacer
 Lo siguiente son algunas cosas que faltan por hacer.
 - implementar revisar si una matriz es unitaria
--pruebas unitarias para producto tensor
+- pruebas unitarias para producto tensor
 - arreglar Cambios de coordenadas de numeros complejos
 
 
