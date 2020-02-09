@@ -2,7 +2,7 @@
 
 # Calculadora Compleja
 
-# Numeros Complejos
+## Numeros Complejos
 Utilizado java se implementan las siguientes operaciones para numeros Complejos:
  - Para crear un numero complejo (Numero_complejo(double a(parte real), double b(parte imaginaria)) tambien tiene un atributo cartesiano que supone el numero se encuetra en coordenadas cartesianas.
  - las siguientes funciones se usan NumeroComplejo.funcion(NumeroComplejo)
@@ -16,7 +16,7 @@ Utilizado java se implementan las siguientes operaciones para numeros Complejos:
  - Conversion entre polares y cartecianas
  - fase de un numero complejos
 
-# Vectores
+## Vectores
 Los vectores esta implentados mediante una lista de Numeros Complejos, pra crear un Vector.
  - Adicion
  - Inverso aditivo
@@ -30,7 +30,7 @@ Los vectores esta implentados mediante una lista de Numeros Complejos, pra crear
  - Distancia entre vectores
  - Producto tensor(entre vectores y matriz-vector)
 
-# Matrizes
+## Matrizes
 Las matrices estan implementadas por listas de vectores que representan las columnas y soporta las siguientes funciones.
 - Adicion
 - Inversa aditiva
@@ -42,7 +42,7 @@ Las matrices estan implementadas por listas de vectores que representan las colu
 - Accion de una matriz sobre un vector
 - Revisar si una matriz es unitaria
 - Producto Tensor entre matrices
-# Por hacer
+## Por hacer
 Lo siguiente son algunas cosas que faltan por hacer.
 -Pruebas para vectores y matrices
 -implementar revisar si una matriz es unitaria
