@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ProyectoCNYT.MatrizTest" time="0.094" tests="9" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ADMIN\Documents\CNYT\target\test-classes;C:\Users\ADMIN\Documents\CNYT\target\classes;C:\Users\ADMIN\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\ADMIN\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CO"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\ADMIN\AppData\Local\Temp\surefire5511078178322449434\surefirebooter8962731234917012195.jar C:\Users\ADMIN\AppData\Local\Temp\surefire5511078178322449434 2020-02-09T17-58-58_914-jvmRun1 surefire5076467836238326850tmp surefire_05292263008633752189tmp"/>
+    <property name="test" value="ProyectoCNYT.MatrizTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\ADMIN\Documents\CNYT\target\test-classes;C:\Users\ADMIN\Documents\CNYT\target\classes;C:\Users\ADMIN\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\ADMIN\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ADMIN"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_241\jre"/>
+    <property name="basedir" value="C:\Users\ADMIN\Documents\CNYT"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ADMIN\AppData\Local\Temp\surefire5511078178322449434\surefirebooter8962731234917012195.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_241\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_241-b07"/>
+    <property name="user.name" value="ADMIN"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.3"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\ADMIN\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMIN\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_241"/>
+    <property name="user.dir" value="C:\Users\ADMIN\Documents\CNYT"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\apache-maven-3.6.3\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.241-b07"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="AdjuntaTest" classname="ProyectoCNYT.MatrizTest" time="0.016"/>
+  <testcase name="AdicionTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="TranspuestaTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="AccionSobreVectorTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="InversaTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="ConjugadaTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="ProductoTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+  <testcase name="EsHermitianaTest" classname="ProyectoCNYT.MatrizTest" time="0.016">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at ProyectoCNYT.MatrizTest.EsHermitianaTest(MatrizTest.java:130)
+</failure>
+    <system-out><![CDATA[------------------------Matriz--------------------------
+----------VECTOR------------
+3.0 2.0
+
+1.0 0.0
+
+4.0 -1.0
+
+----------------------------
+
+----------VECTOR------------
+0.0 0.0
+
+4.0 2.0
+
+0.0 0.0
+
+----------------------------
+
+----------VECTOR------------
+5.0 -6.0
+
+0.0 1.0
+
+0.0 4.0
+
+----------------------------
+
+true
+------------------------Matriz--------------------------
+----------VECTOR------------
+3.0 -2.0
+
+0.0 -0.0
+
+5.0 6.0
+
+----------------------------
+
+----------VECTOR------------
+1.0 -0.0
+
+4.0 -2.0
+
+0.0 -1.0
+
+----------------------------
+
+----------VECTOR------------
+4.0 1.0
+
+0.0 -0.0
+
+0.0 -4.0
+
+----------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="MultiplicacionEscalarTest" classname="ProyectoCNYT.MatrizTest" time="0"/>
+</testsuite>

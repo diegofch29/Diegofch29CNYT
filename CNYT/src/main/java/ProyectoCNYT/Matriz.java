@@ -52,7 +52,7 @@ public class Matriz {
     public Matriz Inversa(){
        Matriz result = new Matriz(this.fil,this.col);
        for (int i=0;i<this.col;i++){
-           result.setColumna(this.columnas[i].Inversa(), this.fil);
+           result.setColumna(this.columnas[i].Inversa(), i);
        }
        return result;
    }
@@ -92,9 +92,9 @@ public class Matriz {
      * @return
      */
     public Matriz Conjugada(){
-       Matriz result = new Matriz(this.col,this.fil);
+       Matriz result = new Matriz(this.fil,this.col);
        for (int i=0;i<this.col;i++){
-           result.setColumna(this.columnas[i].Conjugado(), this.fil);
+           result.setColumna(this.columnas[i].Conjugado(), i);
        }
        return result;
    }
@@ -125,7 +125,7 @@ public class Matriz {
     
     public Matriz multiplicacion(Matriz m){
         Matriz result = new Matriz(this.fil,m.col);
-        Matriz mv=this.Transpuesta();
+        Matriz mv=this.Adjunta();
         Numero_complejo [] elem;
         int cont=0;
         int pos;
@@ -163,7 +163,10 @@ public class Matriz {
         return result;
     }
     public boolean Es_Herminiana(){
-        return this.equals(this.Conjugada());
+        this.print();
+        System.out.println(this.equals(this.Adjunta()));
+        this.Adjunta().print();
+        return this.equals(this.Adjunta());
     }
     
     public void print(){
@@ -178,8 +181,8 @@ public class Matriz {
      * @param v
      * @param col
      */
-    public void setColumna(Vector v, int col){
-        this.columnas[col]=v;        
+    public void setColumna(Vector v, int num){
+        this.columnas[num]=v;        
     }
     
     /**
@@ -187,8 +190,8 @@ public class Matriz {
      * @param v
      * @param col
      */
-    public void setColumna(Numero_complejo[] v, int col){
-        this.columnas[col]=new Vector(v,v.length);        
+    public void setColumna(Numero_complejo[] v, int num){
+        this.columnas[num]=new Vector(v,v.length);        
     }
     
     /**
@@ -206,8 +209,8 @@ public class Matriz {
      * @param col
      * @return
      */
-    public Vector getColumna(int col){
-        return this.columnas[col];
+    public Vector getColumna(int num){
+        return this.columnas[num];
     }
     
     /**

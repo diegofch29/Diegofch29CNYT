@@ -162,6 +162,6 @@ public class Numero_complejo {
      * @return True si son iguales o False si no son iguales
      */
     public boolean equals(Numero_complejo Numero1){
-       return (this.a.equals(Numero1.getA()) && this.b.equals(Numero1.getB()));
+       return (this.a-1<(Numero1.getA()) && Numero1.getA()<this.a+1) && (this.b-1<(Numero1.getB()) && Numero1.getB()<this.b+1);
    }
 }

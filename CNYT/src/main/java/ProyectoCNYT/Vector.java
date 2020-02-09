@@ -25,6 +25,14 @@ public class Vector {
         this.n = n;
     }
     
+    public Vector(double[][] elem){
+        this.Elementos= new Numero_complejo[elem.length];
+        for(int i=0;i<elem.length;i++){
+            Elementos[i]=new Numero_complejo(elem[i][0], elem[i][1]);
+        }
+        this.n=elem.length;
+    }
+    
     /**
      *
      * @param v
@@ -92,6 +100,8 @@ public class Vector {
      */
     public Numero_complejo InnerProduct(Vector v){
         Numero_complejo result = new Numero_complejo(0, 0);
+        v=v.Conjugado();
+        //v.print();
         for (int i=0;i<v.n;i++){
             result=result.sumar(this.Elementos[i].Multiplicar(v.Elementos[i]));
         }
@@ -144,9 +154,13 @@ public class Vector {
         return new Vector(elementos,this.n*v.getN()) ;
     }
     
+    public Numero_complejo Distancia(Vector v){
+        v=this.Sumar(v.Inversa());
+        return v.InnerProduct(v);
+    }
     
-    public double Distancia(Vector v){
-        return Math.pow(this.InnerProduct(v).a,2);
+    public double Norma(){
+        return Math.sqrt(this.InnerProduct(this).a);
     }
     
     
