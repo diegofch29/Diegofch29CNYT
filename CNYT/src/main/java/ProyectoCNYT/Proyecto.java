@@ -6,6 +6,7 @@
 package ProyectoCNYT;
 
 import static java.time.Clock.system;
+import java.util.Scanner;
 
 /**
  *
@@ -16,7 +17,7 @@ public class Proyecto {
     /**
      */
     public static void main(String[] args) {
-        Numero_complejo zero = new Numero_complejo(0,0);
+        /*Numero_complejo zero = new Numero_complejo(0,0);
         Numero_complejo one = new Numero_complejo(1,0);
         Matriz H =new Matriz(2,2);
         double[][] elementos ={{1/Math.sqrt(2),0},{1/Math.sqrt(2),0},{1/Math.sqrt(2),0},{-1/Math.sqrt(2),0}};
@@ -34,6 +35,8 @@ public class Proyecto {
         Vector result=M2.producto_tensor(M1).Accion(qbit4);
         result.print();
         System.out.println("Resultado = "+result.Elementos[0].a*result.Elementos[0].a+", "+result.Elementos[1].a*result.Elementos[1].a);
+        */
+        TallerPrueba();
     }
     
     public void Circuito(){
@@ -127,7 +130,7 @@ public class Proyecto {
         return H;
     }
     
-     public  Matriz rellenar_matriz(double[][] elem ,int fil,int col){
+     public  static Matriz rellenar_matriz(double[][] elem ,int fil,int col){
          Matriz H = new Matriz(fil,col);
          Numero_complejo[] elementos=new Numero_complejo[fil];
          int cont=0;
@@ -139,6 +142,67 @@ public class Proyecto {
              H.setColumna(elementos.clone(), i);
          }
          return H;
+     }
+     public void Tallerpart2(){
+         double[][]elementos= {{0,0},{1.0/3.0,0},{2.0/3.0,0},
+                               {1.0/6.0,0},{1.0/2.0,0},{1.0/3.0,0},
+                               {5.0/6.0,0},{1.0/6.0,0},{0,0}};
+         double[][]elementos2= {{1.0/3.0,0},{2.0/3.0,0},
+                               {2.0/3.0,0},{1.0/3.0,0}};
+         double[][]elem={{1.0,0},{0,0},{0,0}};
+         double[][]elem2={{8.0/10.0,0},{2.0/10.0,0}};
+         Vector vec= new Vector(elem);
+         Vector vec2= new Vector(elem2);
+         Matriz M=rellenar_matriz(elementos, 3, 3);
+         Matriz M1=rellenar_matriz(elementos2, 2, 2);
+         Matriz MM1=M.producto_tensor(M1);
+         Matriz MM2=M.producto_tensor(M1);
+         Vector vect = vec.Producto_Tensor(vec2);
+         int t = 5;
+         for (int i=1;i<t;i++){
+             MM1=MM1.multiplicacion(MM2);
+         }
+         Vector resp = MM1.Accion(vect);
+         resp.print();
+     }
+     public void Taller(){
+         double[][]elementos= {{0,0},{0,0},{0,0},{0,0},{0,0},{1,0},
+                               {0,0},{0,0},{1,0},{0,0},{0,0},{0,0},
+                               {0,0},{0,0},{0,0},{1,0},{0,0},{0,0},
+                               {0,0},{1,0},{0,0},{0,0},{0,0},{0,0},
+                               {0,0},{0,0},{0,0},{0,0},{1,0},{0,0},
+                               {0,0},{0,0},{1,0},{0,0},{0,0},{0,0}};
+         double[][]elem={{6,0},{5,0},{4,0},{3,0},{2,0},{1,0}};
+         Vector vec= new Vector(elem);
+         Matriz M=rellenar_matriz(elementos, 6, 6);
+         Matriz M1=rellenar_matriz(elementos, 6, 6);
+         int t = 3000;
+         for (int i=1;i<t;i++){
+             M=M.multiplicacion(M1);
+         }
+         M.print();
+         Vector resp = M.Accion(vec);
+         resp.print();
+         
+     }
+     
+     public static void  TallerPrueba(){
+         double[][]elementos = {{0,0},{0,0},{0,0},{0,0},{0,0},{1,0},
+                               {0,0},{0,0},{1,0},{0,0},{0,0},{0,0},
+                               {0,0},{0,0},{0,0},{0,0},{1,0},{0,0},
+                               {0,0},{0,0},{0,0},{1,0},{0,0},{0,0},
+                               {0,0},{0,0},{0,0},{0,0},{0,0},{1,0},
+                               {0,0},{0,0},{1,0},{0,0},{0,0},{0,0}};
+         double[][]elem={{6,0},{2,0},{1,0},{5,0},{3,0},{10,0}};
+         Matriz M=rellenar_matriz(elementos, 6, 6);
+         M.print();
+         Vector vec= new Vector(elem);
+         int t = 1;
+         for (int i=1;i<t;i++){
+             M=M.multiplicacion(M);
+         }
+         Vector resp = M.Accion(vec);
+         resp.print();
      }
     
 }

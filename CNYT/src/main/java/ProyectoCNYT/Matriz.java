@@ -115,8 +115,9 @@ public class Matriz {
     public Vector Accion(Vector v){
        Numero_complejo[] elementos_v=new Numero_complejo[v.getN()];
        Vector result = new Vector(v.getN());
-       for (int i=0;i<this.col;i++){
-           elementos_v[i]=this.columnas[i].InnerProduct(v);
+       Matriz M = this.Transpuesta();
+       for (int i=0;i<M.col;i++){
+           elementos_v[i]=M.columnas[i].InnerProduct(v);
        }
        result.setElementos(elementos_v);
        return result;
@@ -129,10 +130,10 @@ public class Matriz {
         Numero_complejo [] elem;
         int cont=0;
         int pos;
-        for (Vector i:mv.columnas){
+        for (Vector i:m.columnas){
             pos=0;
             elem = new Numero_complejo[this.fil];
-            for(Vector j:m.columnas){
+            for(Vector j:mv.columnas){
                 elem[pos]=i.InnerProduct(j);
                 pos+=1;
             }
