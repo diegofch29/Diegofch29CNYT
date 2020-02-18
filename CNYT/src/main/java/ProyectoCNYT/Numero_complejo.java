@@ -22,6 +22,7 @@ public class Numero_complejo {
     public Numero_complejo(double a,double b){
         this.a=a;
         this.b=b;
+        this.cartesiano=true;
     }
 
     Numero_complejo() {}
@@ -128,6 +129,7 @@ public class Numero_complejo {
     public Numero_complejo Cartecianas_Polares(){
         if (cartesiano){
             Numero_complejo result= new Numero_complejo(Math.sqrt(Math.pow(this.a,2)+Math.pow(this.b,2)),Math.atan2(this.b,this.a));   
+            this.cartesiano = false;
             return result;
         }
        return this;
@@ -145,11 +147,15 @@ public class Numero_complejo {
        Numero_complejo result= new Numero_complejo();
        result.setA(this.a*Math.sin(this.b));
        result.setB(this.a*Math.cos(this.b));
+       this.cartesiano=true;
        return result;
    }
     
     public double fase(){
-        return b;
+        if (cartesiano=false){
+            return b;
+        }
+        return Math.atan2(this.b,this.a);
     }
     
     public void print(){

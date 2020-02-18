@@ -96,14 +96,13 @@ public class NumeroComplejoTest {
     }*/
     
     
-    /*
     @Test
     public void Carteciana_Polares(){
         Numero_complejo a = PR.New_complex(-2,1);
         Numero_complejo NumTest = a.Cartecianas_Polares();
         Numero_complejo result= PR.New_complex(Math.sqrt(2), 0.7785);
         Assert.assertTrue(result.equals(NumTest)); 
-    }*/
+    }
     
     
     //Cartesianas
