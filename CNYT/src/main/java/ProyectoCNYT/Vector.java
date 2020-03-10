@@ -121,6 +121,13 @@ public class Vector {
         result.setElementos(NumRes);
         return result;
     }
+    public double modulo(){
+        double resp=0;
+        for(Numero_complejo i:this.Elementos){
+            resp=Math.pow(i.Modulo(),2);
+        }
+        return resp;
+    }
     
     /**
      *

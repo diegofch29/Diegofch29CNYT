@@ -226,9 +226,35 @@ public class Proyecto {
          Vector resp = M.Accion(vec);
          resp.print();
      }
-    
+     
+     public double Simulacion(double[][] estado,int pos){
+         Vector vec= new Vector(estado);
+         System.out.println((Math.pow(vec.getElemento(pos).Modulo(),2))/Math.pow(vec.Norma(),2));
+         return (Math.pow(vec.getElemento(pos).Modulo(),2))/Math.pow(vec.Norma(),2);
+     }
+     public Numero_complejo transicion(double[][] estado,double[][] estado2){
+         Vector vec1 =new Vector(estado);
+         Vector vec2 =new Vector(estado2);
+         Numero_complejo n= vec1.InnerProduct(vec2);  
+         Numero_complejo n1 = new Numero_complejo(1.0/(vec1.Norma()*vec2.Norma()),0);
+         return n.Multiplicar(n1);
+     }
+     
+     public void quiz6(){
+         double[][]elementos= {{2,0},{1,-1},
+                               {1,-1},{3,0}};
+         double[][]elem={{1.0/Math.sqrt(2),0},{1/Math.sqrt(2),0}};
+         Vector vec= new Vector(elem);
+         Matriz M=rellenar_matriz(elementos, 2, 2);
+         System.out.println("---------------"+vec.Norma());
+         if (vec.Norma()<0.95 || 1.05<vec.Norma()){
+             Numero_complejo n= new Numero_complejo(1/vec.Norma(),0);
+             vec=vec.Multiplicacion_Escalar(n);
+         }
+         Vector resp = M.Accion(vec);
+         vec.InnerProduct(resp).print();
+     }
 }
-
 
 /*public static void main(String[] args) {
         Numero_complejo zero = new Numero_complejo(0,0);

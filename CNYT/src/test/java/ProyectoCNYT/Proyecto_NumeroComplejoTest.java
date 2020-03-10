@@ -77,6 +77,14 @@ public class Proyecto_NumeroComplejoTest {
     
     
     @Test
+    public void SistemaCuanticoTest(){
+        double[][]estado= {{2,1},{-1,2},{0,1},{1,0},{3,-1},{2,0},{0,-2},{-2,1},{1,-3},{0,-1}};
+        double[][]estado2= {{-1,-4},{2,-3},{-7,6},{-1,1},{-5,-3},{5,0},{5,8},{4,-4},{8,-7},{2,-7}};
+        double sim = PR.Simulacion(estado, 7);
+        Numero_complejo sim2 = PR.transicion(estado, estado2);
+        Numero_complejo resp= new Numero_complejo(0.02,0.13);
+        Assert.assertTrue((0.1077<sim && sim<0.11) && (sim2.equals(resp)));
+    }
     /*public void Carteciana_Polares(){
         Numero_complejo a = PR.New_complex(-2,1);
         Numero_complejo NumTest = a.Cartecianas_Polares();
