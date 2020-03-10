@@ -36,7 +36,6 @@ public class Proyecto {
         result.print();
         System.out.println("Resultado = "+result.Elementos[0].a*result.Elementos[0].a+", "+result.Elementos[1].a*result.Elementos[1].a);
         */
-        TallerPrueba();
     }
     
     public void Circuito(){
@@ -130,7 +129,7 @@ public class Proyecto {
         return H;
     }
     
-     public  static Matriz rellenar_matriz(double[][] elem ,int fil,int col){
+     public   Matriz rellenar_matriz(double[][] elem ,int fil,int col){
          Matriz H = new Matriz(fil,col);
          Numero_complejo[] elementos=new Numero_complejo[fil];
          int cont=0;
@@ -143,6 +142,29 @@ public class Proyecto {
          }
          return H;
      }
+     
+     
+     public Vector Canicas(double[][] matriz,double [][] v,int clicks){
+         Matriz grafo = rellenar_matriz(matriz,6,6);
+         Vector vec = new Vector(v);
+         Matriz M1 = rellenar_matriz(matriz,6,6);
+         for (int i=1;i<clicks;i++){
+             M1=M1.multiplicacion(grafo);
+         }
+         Vector resp= M1.Accion(vec);
+         return resp;
+     }
+     
+     public Matriz[] slits(int slits,int targets,double[][] probabilities){
+         Matriz grafo = rellenar_matriz(probabilities,slits+targets,slits+targets);
+         grafo=grafo.multiplicacion(grafo);
+         Matriz vec = new Matriz(1,0);
+         vec.setColumna(grafo.getColumna(0),0);
+         Matriz[] resp = {grafo,vec};
+         return resp;
+     }
+     
+     
      public void Tallerpart2(){
          double[][]elementos= {{0,0},{1.0/3.0,0},{2.0/3.0,0},
                                {1.0/6.0,0},{1.0/2.0,0},{1.0/3.0,0},
@@ -186,7 +208,7 @@ public class Proyecto {
          
      }
      
-     public static void  TallerPrueba(){
+     public  void  TallerPrueba(){
          double[][]elementos = {{0,0},{0,0},{0,0},{0,0},{0,0},{1,0},
                                {0,0},{0,0},{1,0},{0,0},{0,0},{0,0},
                                {0,0},{0,0},{0,0},{0,0},{1,0},{0,0},
